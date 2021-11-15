@@ -1,7 +1,10 @@
 var $builtinmodule = function (name) {
 	var mod = {__name__: new Sk.builtin.str("mod")}
-	mod.add = new Sk.builtin.func(function(a, b) {
-        return Sk.ffi.remapToJs(a) + Sk.ffi.remapToJs(b);
+	mod.sin = new Sk.builtin.func(function(a) {
+		Sk.builtin.pyCheckType(a, seqtype, check);
+		a=Sk.ffi.remapToJs(a);
+		for(i=0;i<a.length;i++)a[i]=Math.sin(a[i]);
+        return Sk.ffi.remapToPy(a);
     });
 	return mod;
 }
