@@ -23,5 +23,5 @@ var $builtinmodule = function (name) {
 		
         return Sk.ffi.remapToPy(arr);
     });
-	return mod;
+	return numpy;
 }
