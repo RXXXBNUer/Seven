@@ -488,7 +488,7 @@ var $builtinmodule = function (name) {
 			
                 }
             }
-        }else{
+        }
             //绘制既是起点、又是终点的坐标
             // Locate the start and finish squares.
             for (var y = 0; y < maze_ROWS; y++) {
@@ -521,7 +521,7 @@ var $builtinmodule = function (name) {
                         .attr('xlink:href',maze.marker)
                     }
                 }
-            }
+            
         }
     }
 
