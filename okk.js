@@ -472,11 +472,7 @@ var $builtinmodule = function (name) {
             // Locate the start and finish squares.
             for (var y = 0; y < maze_ROWS; y++) {
                 for (var x = 0; x < maze_COLS; x++) {
-                    if (map[y][x] == maze.SquareType.START) {
-                        actor.x= x;
-                        actor.y= y;
-                    }
-			if (map[y][x] == maze.SquareType.FINISH) {
+                    if (map[y][x] == maze.SquareType.FINISH) {
                         // Move the finish icon into position.
                         var finishIcon = $('#finish');
                         finishIcon.attr('x', maze_SQUARE_SIZE * (x + 0.5) -
@@ -485,6 +481,11 @@ var $builtinmodule = function (name) {
                             finishIcon.attr('height'));
                         maze.finish={x:x,y:y}
                     }
+			if (map[y][x] == maze.SquareType.START) {
+                        actor.x= x;
+                        actor.y= y;
+                    }
+			
                 }
             }
         }else{
