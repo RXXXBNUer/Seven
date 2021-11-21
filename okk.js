@@ -481,7 +481,7 @@ var $builtinmodule = function (name) {
                             finishIcon.attr('height'));
                         maze.finish={x:x,y:y}
                     }
-			if (map[y][x] == maze.SquareType.START) {
+			else if (map[y][x] == maze.SquareType.START) {
                         actor.x= x;
                         actor.y= y;
                     }
