@@ -15,10 +15,10 @@ var $builtinmodule = function (name) {
 			case 4:
 			y+=3;
 			break;
-		}
+		};
 		player.position.set(x, y);
         return Sk.ffi.remapToPy(mode);
-    }
+    	};
 	demo.scale = new Sk.builtin.func(function(mode) {
 		mode=Sk.ffi.remapToJs(mode);
 		switch(mode){
@@ -36,10 +36,10 @@ var $builtinmodule = function (name) {
 			case 4:
 			player.scale.y *= -1;
 			break;
-		}
+		};
 		player.position.set(x, y);
         return Sk.ffi.remapToPy(mode);
-    }
-	);
+    	};
+    );
 	return demo;
 }
