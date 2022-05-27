@@ -3,7 +3,7 @@ var $builtinmodule = function (name) {
 	demo.move = new Sk.builtin.func(function() {
 		x-=4;
 		player.position.set(x, y);
-        return 0;
+        return 1;
     });
 	return demo;
 }
