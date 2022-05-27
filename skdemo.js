@@ -1,6 +1,7 @@
 var $builtinmodule = function (name) {
 	var demo = {__name__: new Sk.builtin.str("demo")}
 	demo.move = new Sk.builtin.func(function(mode) {
+		mode=Sk.ffi.remapToJs(mode);
 		switch(mode){
 			case 1:
 			x-=4;
