@@ -1,7 +1,7 @@
 var $builtinmodule = function (name) {
 	var demo = {__name__: new Sk.builtin.str("demo")}
 	demo.move = new Sk.builtin.func(function(step) {
-		mode=Sk.ffi.remapToJs(step);
+		step=Sk.ffi.remapToJs(step);
 		x+=step;
 		player.position.set(x, y);
         return Sk.ffi.remapToPy(step);
