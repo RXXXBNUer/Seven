@@ -25,5 +25,10 @@ var $builtinmodule = function (name) {
 		}
         return Sk.ffi.remapToPy(mode);
     });
+	demo.change = new Sk.builtin.func(function(degree) {
+		degree=Sk.ffi.remapToJs(degree);
+		player.rotation += MATH.PI*degree/180;
+        return Sk.ffi.remapToPy(degree);
+    });
 	return demo;
 }
