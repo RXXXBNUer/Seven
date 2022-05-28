@@ -1,8 +1,9 @@
 var $builtinmodule = function (name) {
 	var demo = {__name__: new Sk.builtin.str("demo")}
+	sprite=player;
 	demo.move = new Sk.builtin.func(function(step) {
 		step=Sk.ffi.remapToJs(step);
-		player.x+=step;
+		sprite.x+=step;
         return Sk.ffi.remapToPy(step);
     });
 	demo.change = new Sk.builtin.func(function(mode) {
