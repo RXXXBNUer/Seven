@@ -17,7 +17,6 @@ var $builtinmodule = function (name) {
 			break;
 		}
 		player.position.set(x, y);
-		player.position.set(x, y);
         return Sk.ffi.remapToPy(mode);
     });
 	demo.change = new Sk.builtin.func(function(mode) {
